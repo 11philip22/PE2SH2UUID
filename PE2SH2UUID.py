@@ -78,7 +78,7 @@ def main():
                 else:
                     line = f'    {uuid},\n'
                 f.write(bytes(line, encoding='utf-8'))
-            f.write(b'}')
+            f.write(b'};')
 
 
 if __name__ == '__main__':
