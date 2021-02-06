@@ -59,12 +59,12 @@ def main():
         flags
     )
 
-    uuids = convert_to_uuid(converted_dll)
-    print(*uuids, sep=',\n')
-
     if arguments.bin_file:
         with open(output_bin, 'wb') as f:
             f.write(converted_dll)
+
+    uuids = convert_to_uuid(converted_dll)
+    print(*uuids, sep=',\n')
 
     if arguments.header_file:
         with open(output_uuid_header, 'wb') as f:
