@@ -60,6 +60,7 @@ def main():
     )
 
     if arguments.bin_file:
+        print('Creating Shellcode: {}'.format(output_bin))
         with open(output_bin, 'wb') as f:
             f.write(converted_dll)
 
@@ -67,6 +68,7 @@ def main():
     print(*uuids, sep=',\n')
 
     if arguments.header_file:
+        print("Creating UUID header: {}".format(output_uuid_header))
         with open(output_uuid_header, 'wb') as f:
             f.writelines([
                 b'const char* uuids[] =\n',
